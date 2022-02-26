@@ -1,0 +1,17 @@
+pkgname="arzix-alacritty"
+pkgdesc="Alacritty terminal emulator configuration files for Arzix OS"
+pkgver="1.0.0"
+pkgrel=0
+arch=('any')
+license=('MIT')
+depends=('alacritty')
+source=('https://raw.githubusercontent.com/Arzix/Archive/main/alacritty.tar.gz')
+
+sha256sums=("SKIP")
+
+package() {
+	cd alacritty/
+	mkdir -p ~/.config/alacritty/
+	cp -rf * ~/.config/alacritty/
+}
+
